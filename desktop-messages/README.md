@@ -2,7 +2,7 @@
 -----------------
 ## Attributions
 
-- Based on the URL example from Electron documentation.
+- Based on the URL example from Electron documentation. (https://github.com/electron/simple-samples)
 - Modifications and enhancements by Dacoda Bizmark Nelson - Special Circumstances
 
 ## Use
