@@ -4,6 +4,7 @@
 
 - Based on the URL example from Electron documentation. (https://github.com/electron/simple-samples)
 - Modifications and enhancements by Dacoda Bizmark Nelson - Special Circumstances
+- Binary builds provided by [Electron Forge](https://www.electronforge.io/)
 
 ## Usage
 
