@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron app.js"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^3.0.2"
   }

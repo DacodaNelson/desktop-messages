@@ -17,6 +17,8 @@ To compile and run from source:
 - `npm start`
 
 -----------------
+Below is the original documentation from [Electron simple-examples](https://github.com/electron/simple-samples)
+-----------------
 
 # URL
 
