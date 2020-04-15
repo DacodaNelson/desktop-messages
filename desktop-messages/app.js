@@ -20,12 +20,13 @@ app.once('ready', () => {
 
   // URL is argument to npm start
   //  const url = process.argv[2]
+  // Let's load the Google Messages for Web URL!
   const url = "https://messages.google.com/web"
   window.loadURL(url)
 
   // Show window when page is ready
   window.once('ready-to-show', () => {
-    window.maximize()
+//    window.maximize()
     window.show()
   })
 })
