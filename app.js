@@ -33,7 +33,8 @@ app.on('ready', function(){
 		frame: true,
 		resizable: true,	
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: true,
+			spellcheck: true	//Because who doesn't need spellcheck?
 		}
 	});
 	messagesWindow.loadURL(url);
