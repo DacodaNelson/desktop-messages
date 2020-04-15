@@ -1,32 +1,42 @@
-const {app, BrowserWindow} = require('electron') // http://electron.atom.io/docs/api
+/*
+***********************************************************
+	app.js
+	
+	desktop-messages
+		An attempt to get Google Messages for Web on the desktop.
+	
+	Copyright (c) Dacoda Bizmark Nelson
+	Special Circumstances
+	
+	Based on URL example from simple-samples
+	(https://github.com/electron/simple-samples)
+***********************************************************
+*/
 
-let window = null
+const {app, BrowserWindow} = require('electron');
 
-// Wait until the app is ready
-app.once('ready', () => {
-  // Create a new window
-  window = new BrowserWindow({
-    // Set the initial width to 800px
-    width: 800,
-    // Set the initial height to 600px
-    height: 600,
-    // Don't show the window until it ready, this prevents any white flickering
-    show: false,
-    webPreferences: {
-      // Disable node integration in remote page
-      nodeIntegration: false
-    }
-  })
+// In case this changes in the future with one of those
+// perpetual Google messenger service rebrands, mergers,
+// or outright cock-ups, just change the URL below.
 
-  // URL is argument to npm start
-  //  const url = process.argv[2]
-  // Let's load the Google Messages for Web URL!
-  const url = "https://messages.google.com/web"
-  window.loadURL(url)
+const url = "https://messages.google.com/web";
 
-  // Show window when page is ready
-  window.once('ready-to-show', () => {
-//    window.maximize()
-    window.show()
-  })
-})
+let messagesWindow;
+
+app.on('ready', function(){
+	
+	messagesWindow = new BrowserWindow({
+		width: 900,
+		height: 700,
+		show: false,
+		title: "desktop-messages",
+		frame: true,
+		resizable: true,	
+		webPreferences: {
+			nodeIntegration: true
+		}
+	});
+	messagesWindow.loadURL(url);
+	
+	messagesWindow.show();
+});
