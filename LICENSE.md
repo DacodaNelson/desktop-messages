@@ -1,6 +1,7 @@
 MIT License
 
 Original work Copyright (c) 2017 Electron
+
 Modified work Copyright (c) 2020 Dacoda Bizmark Nelson (Special Circumstances)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
