@@ -15,6 +15,8 @@ To compile and run from source:
 - `cd desktop-messages`
 - `npm install`
 - `npm start`
+- Scan the QR code using Google Messages on your Android device.
+- Start messaging!
 
 -----------------
 Below is the original documentation from [Electron simple-examples](https://github.com/electron/simple-samples)
