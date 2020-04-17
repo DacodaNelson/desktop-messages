@@ -1,4 +1,5 @@
 # desktop-messages
+
 -----------------
 
 ## Purpose
@@ -44,19 +45,3 @@ To compile and run from source:
 - Modifications and enhancements by Dacoda Bizmark Nelson - Special Circumstances
 - Binary builds provided by [Electron Forge](https://www.electronforge.io/)
 
------------------
-Below is the original documentation from [Electron simple-examples](https://github.com/electron/simple-samples)
------------------
-
-# URL
-
-Simple [Electron](http://electron.atom.io) application that loads a URL
-passed on the command line in a window.
-
-## Getting started
-
-- Install [Node LTS](https://nodejs.org)
-- Clone this repository
-- `cd url`
-- `npm install` to install the application's dependencies
-- `npm start https://github.com` to start the application and load GitHub
