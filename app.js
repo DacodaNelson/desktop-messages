@@ -40,6 +40,8 @@ app.on('ready', function(){
 		}
 	});
 	
+	createMenu();
+	
 	messagesWindow.loadURL(url);
 	
 	messagesWindow.show();
