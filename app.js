@@ -14,6 +14,8 @@
 */
 
 const {app, BrowserWindow} = require('electron');
+const Menu = require('electron').Menu;
+
 
 // In case this changes in the future with one of those
 // perpetual Google messenger service rebrands, mergers,
@@ -37,7 +39,84 @@ app.on('ready', function(){
 			spellcheck: true	//Because who doesn't need spellcheck?
 		}
 	});
+	
 	messagesWindow.loadURL(url);
 	
 	messagesWindow.show();
+	
 });
+
+// This fix for enabling the system clipboard curtesy of:
+// https://pracucci.com/atom-electron-enable-copy-and-paste.html
+
+function createMenu() {
+  const application = {
+    label: "desktop-messages",
+    submenu: [{
+        label: "New",
+        accelerator: "Command+N",
+        click: () => {
+          if (win === null) {
+            createWindow()
+          }
+        }
+      },
+      {
+        type: "separator"
+      },
+      {
+        label: "Quit",
+        accelerator: "CmdOrCtrl+Q",
+        click: () => {
+          app.quit()
+        }
+      }
+    ]
+  }
+
+  const edit = {
+    label: "Edit",
+    submenu: [
+      {
+        label: "Undo",
+        accelerator: "CmdOrCtrl+Z",
+        selector: "undo:"
+      },
+      {
+        label: "Redo",
+        accelerator: "Shift+CmdOrCtrl+Z",
+        selector: "redo:"
+      },
+      {
+        type: "separator"
+      },
+      {
+        label: "Cut",
+        accelerator: "CmdOrCtrl+X",
+        selector: "cut:"
+      },
+      {
+        label: "Copy",
+        accelerator: "CmdOrCtrl+C",
+        selector: "copy:"
+      },
+      {
+        label: "Paste",
+        accelerator: "CmdOrCtrl+V",
+        selector: "paste:"
+      },
+      {
+        label: "Select All",
+        accelerator: "CmdOrCtrl+A",
+        selector: "selectAll:"
+      }
+    ]
+  }
+
+  const template = [
+    application,
+    edit
+  ]
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template))
+}
