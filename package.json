@@ -1,6 +1,6 @@
 {
   "name": "desktop-messages",
-  "version": "0.2.0",
+  "version": "1.0.0-b",
   "description": "Access to Google Messages for Web, except without having to use a browser tab.",
   "repository": "DacodaNelson/desktop-messages",
   "main": "app.js",
