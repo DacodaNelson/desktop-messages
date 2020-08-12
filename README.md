@@ -39,11 +39,22 @@ Packaged releases should be available semi-regularly.
 To compile and run from source:
 
 - Clone the repository
+	- `git clone https://github.com/DacodaNelson/desktop-messages`
 - `cd desktop-messages`
 - `npm install`
 - `npm start`
 - Scan the QR code using Google Messages on your Android device.
 - Start messaging!
+
+Instead of launching from the terminal using `npm start` you can build using [Electron Forge](https://www.electronforge.io/):
+
+- Clone the repository
+	- `git clone https://github.com/DacodaNelson/desktop-messages`
+- `cd desktop-messages`
+- `npm install`
+- `npm run make`
+- The executable is now located in the subfolder out/desktop-messages-darwin-x64/ and can be launched in the standard way for your platform.
+	- Feel free to move it to wherever you prefer to launch your applications from!
 
 ## Attributions
 

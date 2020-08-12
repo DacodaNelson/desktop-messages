@@ -1,6 +1,6 @@
 {
   "name": "desktop-messages",
-  "version": "1.0.0-b",
+  "version": "1.0.1",
   "description": "Access to Google Messages for Web, except without having to use a browser tab.",
   "repository": "DacodaNelson/desktop-messages",
   "main": "app.js",
@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.50",
+    "@electron-forge/cli": "^6.0.0-beta.52",
     "@electron-forge/maker-deb": "^6.0.0-beta.50",
     "@electron-forge/maker-rpm": "^6.0.0-beta.50",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
@@ -26,24 +26,24 @@
       "packagerConfig": {},
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "desktop_messages"
-          }
-        },
-        {
           "name": "@electron-forge/maker-zip",
           "platforms": [
             "darwin"
-          ]
+          ],
+          "config": {
+            "name": "desktop-messages"
+          }
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
+          "platforms": [
+            "linux"
+          ],
+          "config": {
+            "options": {
+              "maintainer": "Dacoda Nelson"
+            }
+          }
         }
       ]
     }
