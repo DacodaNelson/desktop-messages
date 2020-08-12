@@ -28,7 +28,8 @@
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
+            "darwin",
+            "linux"
           ],
           "config": {
             "name": "desktop-messages"
